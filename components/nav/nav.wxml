@@ -1,0 +1,7 @@
+<view class="navContainer" bindtap="handleMenu">
+  <view class="nav_block pen">笔</view>
+  <view class="nav_block">型</view>
+  <view class="nav_block">橡</view>
+  <view class="nav_block">左</view>
+  <view class="nav_block">右</view>
+</view>

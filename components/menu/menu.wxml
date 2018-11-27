@@ -1,0 +1,7 @@
+<view class="menueContainer">
+  <view class="menue_block">铅笔</view>
+  <view class="menue_block">钢笔</view>
+  <view class="menue_block">各种笔</view>
+  <view class="menue_block">我还</view>
+  <view class="menue_block">没想好</view>
+</view>
