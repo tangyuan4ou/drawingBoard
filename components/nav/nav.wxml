@@ -1,3 +1,4 @@
+
 <view class="navContainer" catchtap="_handleMenu">
   <view id="pen" class="nav_block" >笔</view>
   <view id ="xing" class="nav_block">型</view>
