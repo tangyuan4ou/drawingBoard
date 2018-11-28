@@ -4,7 +4,7 @@ Page({
 
   data: {
     height: '',
-    menuArr: [{mes: '铅笔'}]
+    menuArr: []
   },
   onReady() {
     var _this = this
@@ -20,9 +20,7 @@ Page({
   },
 
   onMenuevent(e){
-    console.log(this.data.menuArr)
-    this.data.menuArr = e.detail
-    console.log(e.detail)
+    this.setData({ menuArr: e.detail })
   }
 
 })
