@@ -21,14 +21,13 @@ Component({
    */
   methods: {
     handleMenu(e) {
-      let x = parseInt(e.detail.x)
-      console.log(x-50)
-      console.log(0 < x - 50 <= 50)
-      if ( x - 50 <= 0) {
-        console.log('笔')
-      } else if (0 < x - 50 <= 50) {
-        console.log('形')
-      } else { console.log('其他') }
+      console.log(e)
+      const query = wx.createSelectorQuery()
+      console.log(query.selectAll('.nav_block'))
+      query.select('.nav_block').boundingClientRect()
+      query.exec(res => {
+        console.log(res)
+      })
     }
   }
 })
