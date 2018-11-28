@@ -22,6 +22,7 @@ Page({
   onMenuevent(e){
     console.log(this.data.menuArr)
     this.data.menuArr = e.detail
+    consloe.log(this.data.menuArr);
     console.log(e.detail)
   }
 
