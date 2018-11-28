@@ -1,7 +1,8 @@
-<view bindtap="handleMenu" class="navContainer">
-  <view id="a" class="nav_block pen">笔</view>
-  <view id="b" class="nav_block">型</view>
-  <view id="c" class="nav_block">橡</view>
-  <view id="d" class="nav_block">左</view>
-  <view id="e" class="nav_block">右</view>
+
+<view class="navContainer" catchtap="_handleMenu">
+  <view id="pen" class="nav_block" >笔</view>
+  <view id ="xing" class="nav_block">型</view>
+  <view class="nav_block">橡</view>
+  <view class="nav_block">左</view>
+  <view class="nav_block">右</view>
 </view>
