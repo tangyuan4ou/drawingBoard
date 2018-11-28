@@ -1,7 +1,8 @@
-<view class="menueContainer">
-  <view class="menue_block">铅笔</view>
-  <view class="menue_block">钢笔</view>
-  <view class="menue_block">各种笔</view>
-  <view class="menue_block">我还</view>
-  <view class="menue_block">没想好</view>
+<view class="menueContainer" hidden="{{!isShow}}">
+  <view class="menue_block"
+    wx:for="{{ menuArr }}"
+    wx:key="index"
+    wx:for-item="item">
+    {{ item.mes }}
+    </view>
 </view>

@@ -1,8 +1,10 @@
 //index.js
 
 Page({
+
   data: {
-    height: ''
+    height: '',
+    menuArr: [{mes: '铅笔'}]
   },
   onReady() {
     var _this = this
@@ -15,9 +17,12 @@ Page({
       }
     });
 
-    //获得nav组件
-    this.nav = this.selectComponent(".nav");
   },
-  
+
+  onMenuevent(e){
+    console.log(this.data.menuArr)
+    this.data.menuArr = e.detail
+    console.log(e.detail)
+  }
 
 })

@@ -1,5 +1,8 @@
 <!--index.wxml-->
 <view class="container" style="height:{{height}}rpx">
-  <Menu class="menu"></Menu>
-  <Nav class="nav"></Nav>
+  <Menu class="menu"
+    menuArr="{{ menuArr }}"></Menu>
+  <Nav class="nav"
+    bind:menuevent='onMenuevent'>
+  </Nav>
 </view>
