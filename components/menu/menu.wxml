@@ -1,8 +1,8 @@
-<view class="menueContainer" hidden="{{!isShow}}">
-  <view class="menue_block"
+<view class="menuContainer">
+  <view class="menu_block"
     wx:for="{{ menuArr }}"
     wx:key="index"
     wx:for-item="item">
     {{ item.mes }}
-    </view>
+  </view>
 </view>

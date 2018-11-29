@@ -6,7 +6,6 @@ Component({
   },
 
   data: {
-    isShow: true
   },
 
   methods: {}

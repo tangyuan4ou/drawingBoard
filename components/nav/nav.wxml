@@ -1,7 +1,27 @@
-<view class="navContainer" catchtap="_handleMenu">
-  <view id="pen" class="nav_block" >笔</view>
-  <view id ="xing" class="nav_block">型</view>
-  <view class="nav_block">橡</view>
-  <view class="nav_block">左</view>
-  <view class="nav_block">右</view>
+<view class="nav_container" bindtap="_handleMenu">
+  <view class="nav_block" >
+    <view hidden="{{penActive}}">
+      <i id="pen"  class="nav_icon iconfont icon-qianbi"></i>
+    </view>
+    <image hidden="{{!penActive}}" id="penActive"  class="icon_block_img" src="./../../static/img/nav/pencil.png" />
+  </view>
+  <view class="nav_block">
+    <view hidden="{{shapeActive}}">
+      <i id="shape" class="nav_icon iconfont icon-jinlingyingcaiwangtubiao83"></i>
+    </view>
+    <image hidden="{{!shapeActive}}" id="shapeActive"  class="icon_block_img" src="./../../static/img/nav/hezi.png" />
+  </view>
+  <view class="nav_block">
+    <i class="nav_icon iconfont icon-xiangpi"></i>
+  </view>
+  <view class="nav_block">
+    <i class="nav_icon iconfont icon-dongtaitiaosepan"></i>
+  </view>
+  <view class="nav_block">
+    <i class="nav_icon iconfont icon-chexiaofanhuichehuishangyibu"></i>
+  </view>
+  <view class="nav_block">
+    <i class="nav_icon iconfont icon-chexiaofanhuichehuishangyibu1"></i>
+  </view>
+  
 </view>

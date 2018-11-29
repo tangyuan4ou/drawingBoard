@@ -4,10 +4,11 @@ Page({
 
   data: {
     height: '',
-    menuArr: [{mes: '铅笔'}]
+    menuArr: [],
+    menuShow: false
   },
   onReady() {
-    var _this = this
+    const _this = this
     wx.getSystemInfo({
       success(res) {
         let rpxR = 750 / res.windowWidth
@@ -20,9 +21,10 @@ Page({
   },
 
   onMenuevent(e){
-    console.log(this.data.menuArr)
-    this.data.menuArr = e.detail
-    console.log(e.detail)
+    this.setData({
+      menuArr: e.detail.menuData,
+      menuShow: e.detail.menuShow
+    })
   }
 
 })
