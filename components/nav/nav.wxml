@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 <view class="nav_container" bindtap="_handleMenu">
   <view class="nav_block" >
     <view hidden="{{penActive}}">
@@ -25,13 +24,4 @@
     <i class="nav_icon iconfont icon-chexiaofanhuichehuishangyibu1"></i>
   </view>
   
-=======
-
-<view class="navContainer" catchtap="_handleMenu">
-  <view id="pen" class="nav_block" >笔</view>
-  <view id ="xing" class="nav_block">型</view>
-  <view class="nav_block">橡</view>
-  <view class="nav_block">左</view>
-  <view class="nav_block">右</view>
->>>>>>> ec26237f457044a588613694b270c300f8401b19
 </view>
