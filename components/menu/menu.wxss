@@ -1,5 +1,26 @@
+@import './iconfont.wxss';
 
 .menu_block {
   height: 80rpx;
   line-height: 80rpx;
+}
+
+.menu_icon {
+  display: inline-block;
+  font-size: 90rpx;
+  
+}
+
+.pen {
+  transform: translateX(-30rpx);
+  transition: all .2s ease-in;
+}
+
+.penActive {
+  color: #0000FF;
+  transform: translateX(0rpx);
+}
+
+.shapActive {
+  color: red;
 }

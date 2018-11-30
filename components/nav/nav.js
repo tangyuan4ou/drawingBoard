@@ -19,17 +19,18 @@ Component({
     //pen
     penActive: false,
     penData: [
-      { mes: '铅笔' },
-      { mes: '钢笔' },
-      { mes: '各种笔'}
+      { icon: 'icon-qianbi', id: 'pencil', isPen: 1 },
+      { icon: 'icon-gangbi', id: 'pen', isPen: 1 },
+      { icon: 'icon-jihaobi', id: 'markPen', isPen: 1 }
     ],
 
     //shape
     shapeActive: false,
     shapeData: [
-      {mes: '矩形'},
-      {mes: '圆形'},
-      {mes: '椭圆'}
+      { icon: 'icon-zhixian', id: 'line' },
+      { icon: 'icon-xian', id: 'dottedLine' },
+      { icon: 'icon-jia', id: 'rectangle' },
+      { icon: 'icon-yuanxing', id: 'circular' }
     ]
   },
 
@@ -43,14 +44,20 @@ Component({
       switch(id) {
         case 'pen':
           this._handleShape(this.data.shapeData, false)
-          this._handlePen(this.data.penData, true)
+          this.setData({ penActive: true })
+          setTimeout(() => {
+            this._handlePen(this.data.penData, true)
+          }, 200)
           break;
         case 'penActive':
           this._handlePen(this.data.penData, false)
           break;
         case 'shape':
           this._handlePen(this.data.penData, false)
-          this._handleShape(this.data.shapeData, true)
+          this.setData({ shapeActive: true })
+          setTimeout(() => {
+            this._handleShape(this.data.shapeData, true)
+          }, 200)
           break;
         case 'shapeActive':
           this._handleShape(this.data.shapeData, false)
@@ -61,7 +68,7 @@ Component({
     },
 
     _handlePen(data, isShow) {
-      this.setData({ penActive: isShow })
+      if (!isShow) this.setData({ penActive: isShow })
       let myMenuData = { menuData: data, menuShow: isShow }
       this.triggerEvent('menuevent', myMenuData)
     },

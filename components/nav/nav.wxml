@@ -1,7 +1,7 @@
-<view class="nav_container" bindtap="_handleMenu">
+<view class="nav_container" catchtap="_handleMenu">
   <view class="nav_block" >
     <view hidden="{{penActive}}">
-      <i id="pen"  class="nav_icon iconfont icon-qianbi"></i>
+      <i id="pen" class="nav_icon iconfont icon-qianbi"></i>
     </view>
     <image hidden="{{!penActive}}" id="penActive"  class="icon_block_img" src="./../../static/img/nav/pencil.png" />
   </view>

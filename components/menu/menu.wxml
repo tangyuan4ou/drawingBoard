@@ -1,8 +1,10 @@
-<view class="menuContainer">
+<view class="menu_container" catchtap="_handleMenu">
   <view class="menu_block"
     wx:for="{{ menuArr }}"
     wx:key="index"
     wx:for-item="item">
-    {{ item.mes }}
+    <i id="{{ item.id }}" 
+      class="{{ item.isPen ? 'pen' : 'shap' }} {{ index == activeIndex ? (item.isPen ? 'penActive' : 'shapActive') : '' }} menu_icon iconfont {{ item.icon }}">
+    </i>
   </view>
 </view>
