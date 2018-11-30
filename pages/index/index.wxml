@@ -1,7 +1,10 @@
 <!--index.wxml-->
 <view class="container" style="height:{{height}}rpx">
+  <canvas canvas-id="canvas" style="height:{{height}}rpx;width:100%;"></canvas>
   <Menu class="menu {{ menuShow ? '' : 'unactive' }}"
-    menuArr="{{ menuArr }}">
+    menuArr="{{ menuArr }}"
+    activeIndex="{{ menuActiveIndex }}"
+    bind:handleMenu='myHandleMenu'>
   </Menu>
   <Nav class="nav"
     bind:menuevent='onMenuevent'>

@@ -8,7 +8,6 @@
 .menu_icon {
   display: inline-block;
   font-size: 90rpx;
-  
 }
 
 .pen {
