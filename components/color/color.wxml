@@ -1,0 +1,19 @@
+<view class="color_container">
+  <view class="color_wrapper">
+    <view wx:for="{{ colorArr }}"
+      wx:key="index"
+      wx:for-item="item"
+      id="{{ item.bg }}"
+      class="color_item"
+      style="background-color: #{{ item.bg }}">
+    </view>
+  </view>
+  <view class="c_common_item title">常用色:</view>
+  <view wx:for="{{ cColorArr }}"
+    wx:key="index"
+    wx:for-item="item"
+    id="cColor {{ item.bg }}"
+    class="c_common_item color"
+    style="background-color: #{{ item.bg }}">
+  </view>
+</view>

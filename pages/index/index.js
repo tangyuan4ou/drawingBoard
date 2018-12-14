@@ -1,11 +1,10 @@
 //index.js
-
 import pencil from './../../utils/pencil'
 
 Page({
 
   data: {
-    height: '',
+    height: Number, width: Number,
     menuArr: [],
     menuActiveIndex: 5,
     menuShow: false
@@ -16,7 +15,8 @@ Page({
       success(res) {
         let rpxR = 750 / res.windowWidth
         _this.setData({
-          height: res.windowHeight * rpxR
+          width: res.windowWidth * rpxR,
+          height: res.windowHeight * rpxR -50
         })
       }
     });
@@ -49,6 +49,14 @@ Page({
       menuArr: e.detail.menuData,
       menuShow: e.detail.menuShow
     })
+  },
+
+  //清空画布
+  _clearRect() {
+    var ctx = wx.createCanvasContext('canvas')
+    ctx.clearRect(0, 0, 0, 0) 
+    // ctx.clearRect(0, 0, this.data.width, this.data.height)
+    ctx.draw()
   }
 
 })

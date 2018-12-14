@@ -1,4 +1,3 @@
-// components/Dialog/dialog.js
 Component({
 
   properties: {

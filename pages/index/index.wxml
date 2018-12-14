@@ -1,11 +1,15 @@
 <!--index.wxml-->
+<view class="clearRect">
+  <i catchtap="_clearRect" class="clear_icon iconfont icon-shanchu"></i>
+</view>
 <view class="container" style="height:{{height}}rpx">
-  <canvas canvas-id="canvas" style="height:{{height}}rpx;width:100%;"></canvas>
+  <canvas canvas-id="canvas" calss="canvas" style="height:{{height}}rpx;width:100%;"></canvas>
   <Menu class="menu {{ menuShow ? '' : 'unactive' }}"
     menuArr="{{ menuArr }}"
     activeIndex="{{ menuActiveIndex }}"
     bind:handleMenu='myHandleMenu'>
   </Menu>
+  <Color></Color>
   <Nav class="nav"
     bind:menuevent='onMenuevent'>
   </Nav>

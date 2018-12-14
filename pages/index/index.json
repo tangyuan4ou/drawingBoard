@@ -1,6 +1,7 @@
 {
   "usingComponents": {
     "Nav": "/components/nav/nav",
-    "Menu": "/components/menu/menu"
+    "Menu": "/components/menu/menu",
+    "Color": "/components/color/color"
   }
 }

@@ -1,13 +1,23 @@
+@import './iconfont.wxss';
+
+.clearRect {
+  margin-left: 660rpx;
+  color: #999;
+}
+
+.clear_icon {
+  font-size: 40rpx;
+}
 /**index.wxss**/
 .container {
   position: relative;
   width: 100%;
   height: 500rpx;
 }
+
 .menu {
   position: absolute;
   left: 0; bottom: 300rpx;
-  /* transform: translate(9, -50%); */
   width: 150rpx;
   transition: left .2s ease-in;
 }
