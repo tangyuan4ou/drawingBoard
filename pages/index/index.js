@@ -22,7 +22,15 @@ Page({
     });
 
   },
-
+  touchstart(e){
+    pencil.touchstart(e)
+  },
+  touchmove(e){
+    pencil.touchmove(e)
+  },
+  touchend(e){
+    pencil.touchend(e)
+  },
   //工具栏选中
   myHandleMenu(e) {
     let id = e.detail
@@ -30,7 +38,6 @@ Page({
       case 'pencil':
         this.setData({ menuActiveIndex: 0 })
         pencil.start()
-        console.log('pencil')
         break;
       case 'pen':
         this.setData({ menuActiveIndex: 1 })

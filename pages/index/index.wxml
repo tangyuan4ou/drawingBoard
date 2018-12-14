@@ -1,6 +1,6 @@
 <!--index.wxml-->
 <view class="container" style="height:{{height}}rpx">
-  <canvas canvas-id="canvas" style="height:{{height}}rpx;width:100%;"></canvas>
+  <canvas disable-scroll="true" bindtouchmove="touchmove" bindtouchend="touchend" bindtouchstart="touchstart" canvas-id="canvas" style="height:{{height}}rpx;width:100%;"></canvas>
   <Menu class="menu {{ menuShow ? '' : 'unactive' }}"
     menuArr="{{ menuArr }}"
     activeIndex="{{ menuActiveIndex }}"
