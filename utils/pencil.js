@@ -1,26 +1,60 @@
 
 export default {
   date: {
-    aa: '1'
+    ctx: wx.createCanvasContext('canvas'),
+    startX: 0,
+    startY: 0
+  },
+  touchstart(e){
+    // wx.canvasGetImageData({
+    //   canvasId: "canvas",
+    //   x: 0,
+    //   y: 0,
+    //   width: 300,
+    //   height: 300,
+    //   success(res) {
+    //     console.log(res)
+    //   }
+    // })
+    var ctx = this.date.ctx
+    this.date.startX = e.touches[0].x
+    this.date.startY = e.touches[0].y
+    ctx.setLineWidth(1)
+    ctx.setLineCap("round")
+    ctx.setStrokeStyle('red')
+    // ctx.beginPath()
+  },
+  touchmove(e){
+    var ctx = this.date.ctx
+    var x = e.touches[0].x
+    var y = e.touches[0].y
+    ctx.moveTo(this.date.startX,this.date.startY)
+    ctx.lineTo(x,y)
+    ctx.stroke()
+    this.date.startX = x
+    this.date.startY = y
+    // ctx.draw(true)
+    wx.drawCanvas({
+      canvasId: 'canvas',
+      reserve: true,
+      actions: ctx.getActions()
+    })
+    // console.log(ctx)
+  },
+  touchend (){
+    wx.getSystemInfo({
+      success(res) {
+        console.log(res.model)
+        console.log(res.pixelRatio)
+        console.log(res.windowWidth)
+        console.log(res.windowHeight)
+        console.log(res.language)
+        console.log(res.version)
+        console.log(res.SDKVersion)
+      }
+    })
   },
   start() { 
-    var context = wx.createCanvasContext('canvas')
-    
-    context.setStrokeStyle("#00ff00")
-    context.setLineWidth(5)
-    context.rect(0, 0, 200, 200)
-    context.stroke()
-    context.setStrokeStyle("#ff0000")
-    context.setLineWidth(2)
-    context.moveTo(160, 100)
-    context.arc(100, 100, 60, 0, 2 * Math.PI, true)
-    context.moveTo(140, 100)
-    context.arc(100, 100, 40, 0, Math.PI, false)
-    context.moveTo(85, 80)
-    context.arc(80, 80, 5, 0, 2 * Math.PI, true)
-    context.moveTo(125, 80)
-    context.arc(120, 80, 5, 0, 2 * Math.PI, true)
-    context.stroke()
-    context.draw()
+
   }
 }

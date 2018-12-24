@@ -3,7 +3,7 @@
   <i catchtap="_clearRect" class="clear_icon iconfont icon-shanchu"></i>
 </view>
 <view class="container" style="height:{{height}}rpx">
-  <canvas canvas-id="canvas" calss="canvas" style="height:{{height}}rpx;width:100%;"></canvas>
+  <canvas class="canvas" disable-scroll="true" bindtouchmove="touchmove" bindtouchend="touchend" bindtouchstart="touchstart" canvas-id="canvas" style="height:{{height}}rpx;width:100%;"></canvas>
   <Menu class="menu {{ menuShow ? '' : 'unactive' }}"
     menuArr="{{ menuArr }}"
     activeIndex="{{ menuActiveIndex }}"
